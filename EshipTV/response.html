@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Pragma: no-cache">
+    <meta http-equiv="X-Accel-Buffering: no">
+    <meta http-equiv="Last-Modified" content="Wed, 06 Feb 2019 19:11:25 GMT">
+
+    <meta http-equiv="Cache-Control" content="no-cache, cachehack=1549480285">
+    <meta http-equiv="Cache-Control" content="no-store, must-revalidate">
+    <meta http-equiv="Cache-Control" content="post-check=-1, pre-check=-1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <noscript>Este sistema requer suporte a Javacript</noscript>
+
+    <title>Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Css/Libs/materialize.css">
+    <link rel="stylesheet" href="Css/Libs/jquery-ui.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="Css/Fontes.css">
+    <link rel="stylesheet" href="Css/Padrao/Cores.css">
+    <link rel="stylesheet" href="Css/Padrao/Animation.css">
+    <link rel="stylesheet" href="Css/Padrao/Principal.css">
+
+    <link rel="stylesheet" href="Css/Padrao/Outros/TextoEstilo.css">
+    <link rel="stylesheet" href="Css/Padrao/Outros/PreDebug.css">
+    <link rel="stylesheet" href="Css/Padrao/Outros/Tooltip.css">
+    <link rel="stylesheet" href="Css/Padrao/Outros/LoginBoasVindas.css">
+    <link rel="stylesheet" href="Css/Padrao/Outros/PlantaArmazem.css">
+    <link rel="stylesheet" href="Css/Padrao/Outros/EstruturaCheckPoint.css">
+
+    <link rel="stylesheet" href="Css/Padrao/Cabecalho/Cabecalho.css">
+    <link rel="stylesheet" href="Css/Padrao/Cabecalho/CabecalhoModuloAtual.css">
+    <link rel="stylesheet" href="Css/Padrao/Cabecalho/CabecalhoVerticalIcones.css">
+
+    <link rel="stylesheet" href="Css/Padrao/Field/Field.css">
+    <link rel="stylesheet" href="Css/Padrao/Field/FieldSelect.css">
+    <link rel="stylesheet" href="Css/Padrao/Field/FieldBotao.css">
+    <link rel="stylesheet" href="Css/Padrao/Field/FieldCollapsible.css">
+
+    <link rel="stylesheet" href="Css/Padrao/Grid/Grid.css">
+    <link rel="stylesheet" href="Css/Padrao/Grid/Container.css">
+
+    <link rel="stylesheet" href="Css/Padrao/Modal/ModalGeral.css">
+    <link rel="stylesheet" href="Css/Padrao/Modal/Mensagem.css">
+
+    <link rel="stylesheet" href="Css/Padrao/Rodape/Rodape.css">
+
+    <!-- JS -->
+    <script src="Javascript/Libs/jquery-3.2.1.js"></script>
+    <script src="Javascript/Libs/jquery-ui.js"></script>
+    <script src="Javascript/Libs/jquery-mask.min.js"></script>
+
+    <script src="Javascript/FixJqueryUITooltip.js"></script>
+    <script src="Javascript/Libs/materialize.js"></script>
+    <script src="Javascript/Libs/progressbar.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+    <script src="Javascript/Mascaras.js"></script>
+    <script src="Lib/ckeditor/ckeditor.js"></script>
+
+    <script src="Javascript/BrowserChecker.js"></script>
+    <script src="Javascript/Android/Android.js"></script>
+
+    <script src="Javascript/Sender.js"></script>
+    <script src="Javascript/ControllerRequest.js"></script>
+
+    <script src="Javascript/TelaCarregamento.js"></script>
+    <script src="Javascript/TelaCheckpoint.js"></script>
+
+    <script src="Javascript/ControleBody.js"></script>
+
+    <script src="Javascript/Modal/Modal.js"></script>
+    <script src="Javascript/Modal/GeradorModal.js"></script>
+
+    <script src="Javascript/Counter/Counter.js"></script>
+    <script src="Javascript/TabIndex/TabIndexHandler.js"></script>
+
+    <script src="Javascript/Logout/Logout.js"></script>
+
+    <script src="Javascript/Geral.js"></script>
+    <script src="Javascript/AjaxRequest.js"></script>
+
+</head>
+
+<body id="corpo"
+      class="fundo-boas-vindas"
+      style="background-image: url('Imagens/BACKGROUND/Tema01/backgroundExterno.jpg');">
+
+<main id="main_principal">
+
+<form id="formulario">
+
+<div class="container boas_vindas">
+
+<div id="loginModalLogar" class="isVisible">
+
+<div class="boas_vindas_logo_modal">
+<img src="Imagens/LOGOS/Tema01/logo.png" class="boas_vindas_logo">
+</div>
+
+<div class="row boas_vindas_formulario_login">
+
+<div class="col s12 z-depth-2" style="margin-bottom: 10px;">
+<ul class="tabs">
+
+<li class="tab">
+<a href="#FORMULARIO_LOGAR" class="active" style="cursor:pointer;">Logar</a>
+</li>
+
+<li class="tab">
+<a href="#FORMULARIO_RECUPERAR" class="active" style="cursor:pointer;">Recuperar Senha</a>
+</li>
+
+</ul>
+</div>
+
+<!-- LOGIN -->
+<div id="FORMULARIO_LOGAR" class="col s12">
+
+<div class="input-field">
+
+<input
+type="text"
+id="FORMULARIO_LOGAR_login"
+name="FORMULARIO_LOGAR_login"
+required
+placeholder="">
+
+<label for="FORMULARIO_LOGAR_login">
+Usuário
+<span class="obrigatorio">*Obrigatório</span>
+</label>
+
+</div>
+
+<div class="input-field">
+
+<input
+type="password"
+id="FORMULARIO_LOGAR_senha"
+name="FORMULARIO_LOGAR_senha"
+required
+placeholder="">
+
+<label for="FORMULARIO_LOGAR_senha">
+Senha
+<span class="obrigatorio">*Obrigatório</span>
+</label>
+
+</div>
+
+<button
+type="button"
+id="FORMULARIO_LOGAR_Entrar"
+class="btn waves-effect waves-light"
+onclick="addValorForm('coletarValores',1);
+         addValorForm('botaoAcao','Entrar');
+         addValorForm('elementoTroca','corpo');
+         addValorForm('rota','mod=41&func=1490');
+         ExecAjax();">
+
+Entrar
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="boas_vindas_rodape col s12">
+<p class="boas_vindas_rodape_copyright">
+© 2017 SHL Soluções
+</p>
+</div>
+
+</div>
+
+</form>
+
+</main>
+
+<script>
+$(document).ready(function () {
+    initMaterialize();
+});
+</script>
+
+</body>
+</html>
